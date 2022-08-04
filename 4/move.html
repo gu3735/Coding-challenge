@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!!move!!</title>
+</head>
+
+<style>
+    body{
+        height: 100vh;
+        background-color: skyblue;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #balls{
+        width: 15vw;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        animation-name: rotate-180-cw;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    #bars{
+        width: 12vw;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .ball{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .bar{
+        width: 25px;
+        height: 100px;
+        background-color: white;
+        animation-name: change-size;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+
+
+    @keyframes rotate-180-cw {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+
+    @keyframes change-size{
+        0% {
+            transform: scaleY(1);
+        }
+
+        40% {
+            transform: scaleY(2);
+        }
+
+        60% {
+            transform: scaleY(1);
+        }
+    }
+
+
+
+
+
+</style>
+
+
+<body>
+    <div id="balls">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+
+
+    <div id="bars">
+        <div class="bar" style="animation-delay:  0.0s;"></div>
+        <div class="bar" style="animation-delay:  0.1s;"></div>
+        <div class="bar" style="animation-delay:  0.2s;"></div>
+        <div class="bar" style="animation-delay:  0.3s;"></div>
+        <div class="bar" style="animation-delay:  0.4s;"></div>
+
+    </div>
+</body>
+</html>
