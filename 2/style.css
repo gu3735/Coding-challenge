@@ -1,0 +1,41 @@
+#big-square{
+    width: 300px;
+    height: 300px;
+}
+
+#rectangle{
+    width: 250px;
+    height: 50px;
+}
+
+
+.b-border{
+    border : 4px solid black
+}
+
+.wd-border{
+    border : 4px dotted white
+}
+
+.teal-color{
+    background-color: teal;
+}
+
+.wheat-color{
+    background-color: wheat;
+}
+
+.small-square{
+    width: 50px;
+    height: 50px;
+    background-color: teal;
+    border : 4px solid white
+}
+
+.center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
