@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+</head>
+
+<style>
+    body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    header{  
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .header{
+        padding-top: 40px;
+        position : relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__icon{
+        position : absolute;
+        padding-left : 20px;
+        text-align: left;
+        font-weight: 200;
+    }
+
+    .header{
+        position : relative;
+        width: 100%;
+        text-align: center;
+    }
+
+
+</style>
+
+<body>
+    <header>
+        <div class="header">
+            <h2 class="header__icon">x</h2>
+            <h2 class="header__title">Playlist</h2>    
+            
+        </div>
+    </header>
+
+    <div class="now-play">
+        <div class="now-play__cover">
+            <i class="fa-solid fa-image fa-2xl"></i>
+        </div>
+    </div>
+</body>
+</html>
