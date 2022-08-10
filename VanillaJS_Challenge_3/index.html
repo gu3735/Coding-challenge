@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Number Game</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1>Random Number Game</h1>
+    <h2>Generate a number between 0 and <span> 100</span></h2>
+    <input type="range" class="jsRange" min="5" max="200" step="1" value="100" />
+    <div>
+        Guess the number:
+        <input type="number" id="guessField" class="guessField" />
+        <input type="submit" value="Play!" class="guessSubmit" />
+    </div>
+    <p class="result"></p>
+    <p class="winOrLose"></p>
+    <script src="src/apps.js"></script>
+</body>
+
+</html>
