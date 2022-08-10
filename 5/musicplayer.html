@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="style.css">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,58 +10,164 @@
 </head>
 
 <style>
-    body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+
+    * {
+      box-sizing: border-box;
     }
+
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-color : greenyellow;
+    }
+
 
     header{  
-        position: fixed;
-        width: 100%;
-        top: 0;
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: left;
-    }
-
-    .header{
-        padding-top: 40px;
-        position : relative;
-        width: 100%;
-        text-align: center;
+        position: fixed;
+        top: 10%;
+        width: 100vw;
     }
 
     .header__icon{
-        position : absolute;
-        padding-left : 20px;
-        text-align: left;
-        font-weight: 200;
+      position: absolute;
+      left: 20px;
+      font-size: 28px;
     }
 
-    .header{
-        position : relative;
+    #now-play{
         width: 100%;
-        text-align: center;
+        margin-left: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    .now-play__cover {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      background-color: orange;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid black;
+      border-radius: 5px;
+    }
+
+    .now-play__text{
+        width : 50%;
+    }
+
+    #play-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 50px;
+        width: 100%;
+        height: 40%;
+    }
+
+    .play-list__song__cover{
+        width: 50px;
+        height: 50px;
+        float: left;
+        border-radius: 10px;
+    }
+    .play-list__song{
+        display: flex;
+        align-self: center;
+        position: static;
+        left: 0%;
+        margin-right: auto;
+    }
+
+    .play-list__song__text{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        padding-left: 20px;
+    }
+
+    .play-list__song__title{
+        margin : 0px;
+    }
+
+    .play-list__song__subtitle{
+        margin : 0px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    #icon{
+        display: flex;
+        height: 10%;
+    }
 
 </style>
 
 <body>
+    <!-- 헤더 -->
     <header>
-        <div class="header">
-            <h2 class="header__icon">x</h2>
-            <h2 class="header__title">Playlist</h2>    
-            
-        </div>
+        <h1 class="header__icon">x</h1>
+        <h2 class="header__title">Playlist</h2>    
     </header>
 
-    <div class="now-play">
+    <!-- 나우 플레이 -->
+    <div id="now-play">
         <div class="now-play__cover">
-            <i class="fa-solid fa-image fa-2xl"></i>
+            <i class="far fa-image fa-3x"></i>
+        </div>
+        <div class="now-play__text">
+            <h1 class="now-play__title">Random Love</h1>
+            <h5 class="now-play__subtitle">by Divay Kapoor</h5>
         </div>
     </div>
+
+    <!-- 아이콘 -->
+    <div id="icon">
+        <div class="icon__play">
+            <i class="fa-solid fa-play"></i>
+            <h2>Play</h2>
+        </div>
+    </div>
+
+    <!-- 송 리스트 -->
+    <div id="play-list">
+        <div class="play-list__song">
+            <div class="play-list__song__cover" style="background-color: tomato;"></div>
+            <div class="play-list__song__text">
+                <h3 class="play-list__song__title">Martargasti</h3>
+                <h5 class="play-list__song__subtitle">Mohit Chauhan</h5>
+            </div>
+        </div>
+        <div class="play-list__song">
+            <div class="play-list__song__cover" style="background-color: violet;"></div>
+            <div class="play-list__song__text">
+                <h3 class="play-list__song__title">Attitude</h3>
+                <h5 class="play-list__song__subtitle">Lewis OfMan·Attitude</h5>
+            </div>
+        </div>
+        <div class="play-list__song">
+            <div class="play-list__song__cover" style="background-color: blue;"></div>
+            <div class="play-list__song__text">
+                <h3 class="play-list__song__title">Try Everything</h3>
+                <h5 class="play-list__song__subtitle">Shakira·Zootopia</h5>
+            </div>
+        </div>
+        <div class="play-list__song">
+            <div class="play-list__song__cover" style="background-color: green;"></div>
+            <div class="play-list__song__text">
+                <h3 class="play-list__song__title">Sunflower</h3>
+                <h5 class="play-list__song__subtitle">Joseph Vincent·Sunflower</h5>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

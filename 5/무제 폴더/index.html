@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Baloo Tamma 2", cursive;
+      background-color: #00c6ad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wrapper {
+      background-color: white;
+      width: 310px;
+      padding: 50px 30px 15px 30px;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    header i {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      font-size: 28px;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .main-song {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-song__cover {
+      width: 110px;
+      height: 110px;
+      background-color: #ffbd11;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-right: 0px;
+    }
+
+    .main-song__cover i {
+      color: white;
+    }
+
+    .main-song__data {
+      width: 50%;
+    }
+
+    .main-song__title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .main-song__author {
+      font-size: 18px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .btns__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      border-bottom-width: 5px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    .btns__btn--big {
+      width: 50%;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 15px;
+    }
+
+    .btns__btn--big span {
+      margin-left: 5px;
+      font-size: 20px;
+    }
+
+    .song-list__song {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .song-list__cover {
+      width: 50px;
+      height: 50px;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    .song-list__song:first-child .song-list__cover {
+      background-color: tomato;
+    }
+
+
+    .song-list__song:nth-child(2) .song-list__cover {
+      background-color: violet;
+    }
+
+    .song-list__song:nth-child(3) .song-list__cover {
+      background-color: royalblue;
+    }
+
+    .song-list__song:last-child .song-list__cover {
+      background-color: darkcyan;
+    }
+
+    .song-list__data h5 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .song-list__data h6 {
+      opacity: 0.8;
+    }
+
+    .song-list {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <header>
+        <i class="fas fa-times"></i>
+        <h1>Playlist</h1>
+      </header>
+      <main>
+        <section class="main-song">
+          <div class="main-song__cover">
+            <i class="far fa-image fa-3x"></i>
+          </div>
+          <div class="main-song__data">
+            <h3 class="main-song__title">Random Love</h3>
+            <h5 class="main-song__author">By Divay Kapoor</h5>
+          </div>
+        </section>
+        <section class="btns">
+          <span class="btns__btn btns__btn--big">
+            <i class="fas fa-play fa-xs"></i>
+            <span>Play</span>
+          </span>
+          <span class="btns__btn"><i class="far fa-heart"></i></span>
+          <span class="btns__btn"><i class="fas fa-plus"></i></span>
+        </section>
+        <ul class="song-list">
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+              <h5>Martargasti</h5>
+              <h6>Mohit Chauhan</h6>
+            </div>
+          </li>
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+              <h5>Attitude</h5>
+              <h6>Lewis OfMan·Attitude</h6>
+            </div>
+          </li>
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+              <h5>Try Everything</h5>
+              <h6>Shakira·Zootopia</h6>
+            </div>
+          </li>
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+              <h5>Sunflower</h5>
+              <h6>Joseph Vincent·Sunflower</h6>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Dokdo&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-color : greenyellow;
+  }
+
+
+  header{  
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 10%;
+      width: 100vw;
+  }
+
+  .header__icon{
+    position: absolute;
+    left: 20px;
+    font-size: 28px;
+  }
+
+  #now-play{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .now-play__cover {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px;
+  }
+
+  .now-play__text{
+      width : 50%;
+  }
